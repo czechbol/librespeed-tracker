@@ -1,0 +1,16 @@
+version: "3.6"
+# development version of the compose file
+services:
+  bot:
+    container_name: librespeed-tracker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Prague"
+
+    volumes:
+      - ./config:/config/:z
+    restart: unless-stopped
