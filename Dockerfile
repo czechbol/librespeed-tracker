@@ -1,5 +1,4 @@
 FROM golang:1.20-alpine as builder
-WORKDIR /temp
 RUN go install github.com/librespeed/speedtest-cli@v1.0.10
 
 FROM alpine:3.17
